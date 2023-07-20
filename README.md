@@ -20,3 +20,7 @@
 # API
 Postman collection file in repo - Loan.postman_collection.json
 
+Tables schema structure:
+
+
+![Loan_Tables](https://github.com/tarbus/mini-loan-app/assets/11002306/af10489c-96b4-44eb-a308-b5269bacb34b)
