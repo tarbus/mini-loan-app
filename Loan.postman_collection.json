@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "f53e3c3c-7fda-438c-ad90-e1b2d2bcc634",
+		"name": "Loan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28636975"
+	},
+	"item": [
+		{
+			"name": "UserLogin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"a@a.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "getLoanById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjQGMuY29tIiwiaWF0IjoxNjg5ODAxNDM5LCJleHAiOjE2ODk4MDMyMzl9.USX5hhvtKVfMFUQ0fqWC5GtqhG6e-5IeBVDZXAwPbGE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/loan/302"
+			},
+			"response": []
+		},
+		{
+			"name": "getRepaymentsByUserId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjg5ODAyOTI3LCJleHAiOjE2ODk4MDQ3Mjd9.XNosJYFWPXi2fz_FY30ww5SOR7EbxEz1yDZBodwqhJw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/repayment/user/5"
+			},
+			"response": []
+		},
+		{
+			"name": "getRepaymentsByLoanId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjg5ODAzMjg4LCJleHAiOjE2ODk4MDUwODh9.IqU6XJtEtO-k609XUSpfqteg2HKWwt4Ho8Ks9pkciAI"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/repayment/loan/307"
+			},
+			"response": []
+		},
+		{
+			"name": "addRepayment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhQGEuY29tIiwiaWF0IjoxNjg5ODA2OTg0LCJleHAiOjE2ODk4MDg3ODR9.igDsejVl_GBU9QpisJ_DIdFzJ9XB53WMG1ChjgwAybk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"repaymentId\": 54,\r\n    \"paidAmount\": 30.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/repayment/"
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhQGEuY29tIiwiaWF0IjoxNjg5NTI5MTcyLCJleHAiOjE2ODk1MzA5NzJ9.SfYQYedID7V8VytkW_aTFbyZ_IswffjSdVewez6R6cU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"user user\",\r\n    \"password\": \"password\",\r\n    \"email\": \"d@d.com\",\r\n    \"role\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/user/add"
+			},
+			"response": []
+		},
+		{
+			"name": "testUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjg5NTI5MTQwLCJleHAiOjE2ODk1MzA5NDB9.QGu8P2eHyFizhV3mHBrmIbBx-_ZuCMS3HxcuplUVzCk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:7075/api/user/test"
+			},
+			"response": []
+		},
+		{
+			"name": "applyLoan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjg5Nzg2NDIzLCJleHAiOjE2ODk3ODgyMjN9.bT39AuMkQXLvjKGZ5lr-lMgwDUhpG4N1ng459xrKWF8"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanAmt\": 100,\r\n    \"term\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/loan"
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Loan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhQGEuY29tIiwiaWF0IjoxNjg5ODU2MzgwLCJleHAiOjE2ODk4NTgxODB9.AqAJ0tbj4xSrlKCjWZtJ9FGNUvDA9OLmxyoAffXcHsk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7075/api/loan/approve/304"
+			},
+			"response": []
+		}
+	]
+}
